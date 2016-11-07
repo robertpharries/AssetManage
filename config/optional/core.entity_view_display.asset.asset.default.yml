@@ -1,0 +1,132 @@
+uuid: f4b57eff-9a82-486f-bb04-dfa1fe0fffd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.asset.asset.field_associated_assets
+    - field.field.asset.asset.field_associated_users
+    - field.field.asset.asset.field_description
+    - field.field.asset.asset.field_expiry
+    - field.field.asset.asset.field_name
+    - field.field.asset.asset.field_ownassociated
+    - field.field.asset.asset.field_ownevents
+    - field.field.asset.asset.field_ownusers
+    - field.field.asset.asset.field_ownview
+    - field.field.asset.asset.field_type
+    - field.field.asset.asset.field_value
+  module:
+    - assetmanage
+    - datetime
+    - link
+    - user
+_core:
+  default_config_hash: '-qFX1Zzn2KGITmEqoc2eIfMmY8kdOY_8KD_Npj9nulQ'
+id: asset.asset.default
+targetEntityType: asset
+bundle: asset
+mode: default
+content:
+  field_associated_assets:
+    weight: 7
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_associated_users:
+    weight: 6
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_expiry:
+    weight: 5
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_ownassociated:
+    weight: 13
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownevents:
+    weight: 12
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownusers:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownview:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_type:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_value:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  name:
+    label: inline
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_name: true
